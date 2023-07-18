@@ -1,5 +1,13 @@
 <?php
+    require_once __DIR__.'/Models/Comunicazioni.php';
 
+    $comm = new Comunicazioni('Mario', 'Marco', 'Presentazione', 'Ciao sono Mario');
+
+    echo "Mittente: ".$comm->getMittente().'<br/>';
+    echo "Destinatario: ".$comm->getDestinatario().'<br/>';
+    echo "Oggetto: ".$comm->getOggetto().'<br/>';
+    echo "Contenuto: ".$comm->getContenuto().'<br/>';
+    echo "Stato invio: ".$comm->invio().'<br/>';
 ?>
 
 <!DOCTYPE html>

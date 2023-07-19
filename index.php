@@ -13,6 +13,7 @@
     echo "Oggetto: ".$comm->getOggetto().'<br/>';
     echo "Contenuto: ".$comm->getContenuto().'<br/>';
     echo "Stato invio: ".$comm->invio().'<br/>';
+    echo "Suoneria: ".Comunicazioni::$suoneria.'<br/>';
 
 
 
@@ -24,6 +25,8 @@
     echo "Destinatario: ".$email->getDestinatario().'<br/>';
     echo "Oggetto: ".$email->getOggetto().'<br/>';
     echo "Contenuto: ".$email->getContenuto().'<br/>';
+    echo "Suoneria: ".Email::$suoneria.'<br/>';
+    echo "Colore red: ".Email::$colore_led.'<br/>';
     if($email->getNotificaConsegna()){
         echo "L'email e' stata consegnata correttamente<br/>";
     }
@@ -46,6 +49,8 @@
     echo "Destinatario: ".$email_2->getDestinatario().'<br/>';
     echo "Oggetto: ".$email_2->getOggetto().'<br/>';
     echo "Contenuto: ".$email_2->getContenuto().'<br/>';
+    echo "Suoneria: ".Email::$suoneria.'<br/>';
+    echo "Colore red: ".Email::$colore_led.'<br/>';
     if($email_2->getNotificaConsegna()){
         echo "L'email e' stata consegnata correttamente<br/>";
     }
@@ -66,6 +71,8 @@
     echo "Destinatario: ".$sms->getDestinatario().'<br/>';
     echo "Oggetto: ".$sms->getOggetto().'<br/>';
     echo "Contenuto: ".$sms->getContenuto().'<br/>';
+    echo "Suoneria: ".SMS::$suoneria.'<br/>';
+    echo "Colore red: ".SMS::$colore_led.'<br/>';
     if($sms->getNotificaLettura()){
         echo "Il messaggio e' stato letto<br/>";
     }
@@ -91,6 +98,8 @@
     echo "Destinatario: ".$notifica_push->getDestinatario().'<br/>';
     echo "Oggetto: ".$notifica_push->getOggetto().'<br/>';
     echo "Contenuto: ".$notifica_push->getContenuto().'<br/>';
+    echo "Suoneria: ".NotificaPush::$suoneria.'<br/>';
+    echo "Colore red: ".NotificaPush::$colore_led.'<br/>';
     echo $notifica_push->getVisibile() ? "La notifica push e' visibile<br/>" : "La notifica push e' nascosta<br/>";
     echo "Icona ".$notifica_push->getIcona()."<br/>";
 ?>

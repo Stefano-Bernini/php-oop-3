@@ -2,6 +2,9 @@
     class NotificaPush extends Comunicazioni{
         private $visibile;
         private $icona;
+        public static $colore_led = "Red";
+
+
 
         public function __construct(String $_mittente, String $_destinatario, String $_oggetto, String $_contenuto, Bool $_visibile, String $_icona){
             parent::__construct($_mittente, $_destinatario, $_oggetto, $_contenuto);

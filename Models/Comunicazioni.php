@@ -4,6 +4,7 @@
         private $destinatario;
         private $oggetto;
         private $contenuto;
+        public static $suoneria = "DRIN DRIN DRIN";
 
 
         public function __construct(String $_mittente, String $_destinatario, String $_oggetto, String $_contenuto){

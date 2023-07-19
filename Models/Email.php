@@ -2,6 +2,8 @@
     class Email extends Comunicazioni{
         public $allegato;
         private $notifica_consegna;
+        public static $colore_led = "Orange";
+
 
         public function __construct(String $_mittente, String $_destinatario, String $_oggetto, String $_contenuto, Bool $_notifica_consegna){
             parent::__construct($_mittente, $_destinatario, $_oggetto, $_contenuto);

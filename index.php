@@ -3,6 +3,7 @@
     require_once __DIR__.'/Models/Email.php';
     require_once __DIR__.'/Models/Allegato.php';
     require_once __DIR__.'/Models/SMS.php';
+    require_once __DIR__.'/Models/NotificaPush.php';
 
 
     $comm = new Comunicazioni('Mario', 'Marco', 'Presentazione', 'Ciao sono Mario');
@@ -80,6 +81,18 @@
     }
 
     echo "Stato invio: ".$sms->invio().'<br/>';
+
+
+
+    $notifica_push = new NotificaPush('Umberto', 'Dario', 'Notifica push per l\'app di Dario', 'Contenuto della notifica push per l\'app di Dario', true, 'icona');
+
+    echo "<hr>";
+    echo "Mittente: ".$notifica_push->getMittente().'<br/>';
+    echo "Destinatario: ".$notifica_push->getDestinatario().'<br/>';
+    echo "Oggetto: ".$notifica_push->getOggetto().'<br/>';
+    echo "Contenuto: ".$notifica_push->getContenuto().'<br/>';
+    echo $notifica_push->getVisibile() ? "La notifica push e' visibile<br/>" : "La notifica push e' nascosta<br/>";
+    echo "Icona ".$notifica_push->getIcona()."<br/>";
 ?>
 
 <!DOCTYPE html>
